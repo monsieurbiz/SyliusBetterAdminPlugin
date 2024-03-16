@@ -11,11 +11,11 @@ declare(strict_types=1);
 
 namespace MonsieurBiz\SyliusBetterAdminPlugin\Form\Type\Settings;
 
+use MonsieurBiz\SyliusMediaManagerPlugin\Form\Type\ImageType;
 use MonsieurBiz\SyliusSettingsPlugin\Form\AbstractSettingsType;
 use MonsieurBiz\SyliusSettingsPlugin\Form\SettingsTypeInterface;
 use Symfony\Component\Form\Extension\Core\Type\ColorType;
 use Symfony\Component\Form\FormBuilderInterface;
-use MonsieurBiz\SyliusMediaManagerPlugin\Form\Type\ImageType;
 
 class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInterface
 {
