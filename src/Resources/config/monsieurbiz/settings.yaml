@@ -11,3 +11,4 @@ monsieurbiz_sylius_settings:
             default_values:
                 color: '#1abb9c'
                 circular_icon_color: '#ffffff'
+                logo_sidebar_width: '90'

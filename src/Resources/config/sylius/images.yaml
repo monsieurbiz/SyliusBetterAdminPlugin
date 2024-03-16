@@ -1,0 +1,6 @@
+liip_imagine:
+    filter_sets:
+        admin_sidebar_logo:
+            filters:
+                relative_resize:
+                    widen: 250

@@ -1,5 +1,6 @@
 {% set mainColor = setting('monsieurbiz_better_admin.admin', 'color')|default('#1abb9c') %}
 {% set circularIconColor = setting('monsieurbiz_better_admin.admin', 'circular_icon_color')|default('#1abb9c') %}
+{% set logoSidebarWidth = setting('monsieurbiz_better_admin.admin', 'logo_sidebar_width')|default('90') %}
 {% set customCss = setting('monsieurbiz_better_admin.admin', 'custom_css')|default('') %}
 <style>
 /** Styles to customize colors */
@@ -69,6 +70,11 @@ body div > a {
 
 .pell-content {
     background-color: #fff;
+}
+
+.monsieurbiz-better-admin-sidebar-logo {
+    max-width: {{ logoSidebarWidth }}px;
+    margin: 0 auto;
 }
 
 {{ customCss }}

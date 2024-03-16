@@ -16,6 +16,7 @@ use MonsieurBiz\SyliusSettingsPlugin\Form\AbstractSettingsType;
 use MonsieurBiz\SyliusSettingsPlugin\Form\SettingsTypeInterface;
 use Symfony\Component\Form\Extension\Core\Type\ColorType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInterface
@@ -57,11 +58,21 @@ class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInte
         );
         $this->addWithDefaultCheckbox(
             $builder,
-            'logo_dark',
+            'logo_sidebar',
             ImageType::class,
             [
-                'label' => 'monsieurbiz_better_admin.form.logo_dark',
-                'help' => 'monsieurbiz_better_admin.form.logo_dark_help',
+                'label' => 'monsieurbiz_better_admin.form.logo_sidebar',
+                'help' => 'monsieurbiz_better_admin.form.logo_sidebar_help',
+                'required' => false,
+            ]
+        );
+        $this->addWithDefaultCheckbox(
+            $builder,
+            'logo_sidebar_width',
+            TextType::class,
+            [
+                'label' => 'monsieurbiz_better_admin.form.logo_sidebar_width',
+                'help' => 'monsieurbiz_better_admin.form.logo_sidebar_width_help',
                 'required' => false,
             ]
         );
