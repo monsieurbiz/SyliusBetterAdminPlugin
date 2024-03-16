@@ -1,9 +1,13 @@
 monsieurbiz_better_admin:
     form:
         color: 'Couleur'
-        color_help: 'La couleur principale de votre site utilisée dans les affichages d'administration'
+        color_help: 'La couleur principale de votre site utilisée dans les affichages d''administration'
+        circular_icon_color: 'Couleur de l''icône circulaire'
+        circular_icon_color_help: 'La couleur de l''icône circulaire dans les en-têtes'
+        custom_css: 'CSS personnalisé'
+        custom_css_help: 'CSS personnalisé à appliquer à l''administration (Soyez prudents)'
         logo: 'Logo'
-        logo_help: 'Affiché sur la page de connexion de l'administration'
+        logo_help: 'Affiché sur la page de connexion de l''administration'
         logo_dark: 'Logo sombre'
         logo_dark_help: 'Affiché dans la barre latérale'
     settings:

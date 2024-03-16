@@ -10,3 +10,4 @@ monsieurbiz_sylius_settings:
                 form: MonsieurBiz\SyliusBetterAdminPlugin\Form\Type\Settings\AdminSettingsType
             default_values:
                 color: '#1abb9c'
+                circular_icon_color: '#ffffff'

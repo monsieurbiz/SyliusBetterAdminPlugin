@@ -1,2 +1,3 @@
 imports:
     - { resource: 'monsieurbiz/*.yaml' }
+    - { resource: 'sylius/*.yaml' }

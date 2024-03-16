@@ -11,4 +11,3 @@ services:
     MonsieurBiz\SyliusBetterAdminPlugin\Controller\:
         resource: '../../Controller'
         tags: [ 'controller.service_arguments' ]
-

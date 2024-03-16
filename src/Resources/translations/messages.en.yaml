@@ -2,6 +2,10 @@ monsieurbiz_better_admin:
     form:
         color: 'Color'
         color_help: 'The main color of your website used in admin displays'
+        circular_icon_color: 'Color of circular icon'
+        circular_icon_color_help: 'The color of the circular icon in the headers'
+        custom_css: 'Custom CSS'
+        custom_css_help: 'Custom CSS to apply to the admin (Be careful)'
         logo: 'Logo'
         logo_help: 'Displayed in login admin page'
         logo_dark: 'Logo dark'

@@ -1,0 +1,75 @@
+{% set mainColor = setting('monsieurbiz_better_admin.admin', 'color')|default('#1abb9c') %}
+{% set circularIconColor = setting('monsieurbiz_better_admin.admin', 'circular_icon_color')|default('#1abb9c') %}
+{% set customCss = setting('monsieurbiz_better_admin.admin', 'custom_css')|default('') %}
+<style>
+/** Styles to customize colors */
+.ui.form .field > input:focus, .ui.form .field > textarea:focus,
+.ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="url"]:focus {
+    border-color: {{ mainColor|monsieurbiz_better_admin_hex_to_rgba(0.5) }} !important;
+}
+
+.ui.labeled.input:not([class*="corner labeled"]) .label:first-child + input:focus {
+    border-left-color: {{ mainColor }} !important;
+}
+
+.ui.toggle.checkbox input:checked ~ .box::before, .ui.toggle.checkbox input:checked ~ label::before, .ui.toggle.checkbox input:focus:checked ~ .box::before, .ui.toggle.checkbox input:focus:checked ~ label::before
+{
+    background-color: {{ mainColor }} !important;
+}
+
+.ui.header .circular.icon {
+    color: {{ circularIconColor }} !important;
+    background: {{ mainColor }} !important;
+}
+
+.ui.primary.button {
+    background-color: {{ mainColor }} !important;
+}
+
+.admin-layout__nav .item.active {
+    background: {{ mainColor }} !important;
+}
+
+.sylius-grid-table-wrapper .ui.sortable.table thead th.sorted {
+    color: {{ mainColor }} !important;
+}
+
+body div > a {
+    color: {{ mainColor }};
+}
+
+.ui.breadcrumb a:hover {
+    color: {{ mainColor }} !important;
+}
+
+.stats .ui.basic.active.button
+{
+    color: {{ mainColor }} !important;
+}
+
+
+/** Some styles for forms useful in ui elements */
+.collection--flex > div {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.collection--flex > div > div {
+    margin-right: 10px;
+}
+
+.collection--flex.collection--flex-wide > div > div {
+    width: 48%;
+}
+
+.collection--item-flex [data-form-collection="item"] > div {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.pell-content {
+    background-color: #fff;
+}
+
+{{ customCss }}
+</style>
