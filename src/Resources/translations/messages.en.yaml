@@ -8,6 +8,8 @@ monsieurbiz_better_admin:
         custom_css_help: 'Custom CSS to apply to the admin (Be careful)'
         logo: 'Logo'
         logo_help: 'Displayed in login admin page'
+        logo_login_width: 'Logo width in login'
+        logo_login_width_help: 'Width of the logo in the login page in pixels'
         logo_sidebar: 'Sidebar logo'
         logo_sidebar_help: 'Displayed in sidebar (in dark background)'
         logo_sidebar_width: 'Logo width in sidebar'

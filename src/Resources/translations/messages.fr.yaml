@@ -8,6 +8,8 @@ monsieurbiz_better_admin:
         custom_css_help: 'CSS personnalisé à appliquer à l''administration (Soyez prudents)'
         logo: 'Logo'
         logo_help: 'Affiché sur la page de connexion de l''administration'
+        logo_login_width: 'Largeur du logo dans la page connexion'
+        logo_login_width_help: 'Largeur du logo dans la page de connexion en pixels'
         logo_sidebar: 'Logo de la barre latérale'
         logo_sidebar_help: 'Affiché dans la barre latérale (sur fond sombre)'
         logo_sidebar_width: 'Largeur du logo dans la barre latérale'

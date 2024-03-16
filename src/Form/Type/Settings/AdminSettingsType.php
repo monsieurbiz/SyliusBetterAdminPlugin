@@ -58,6 +58,16 @@ class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInte
         );
         $this->addWithDefaultCheckbox(
             $builder,
+            'logo_login_width',
+            TextType::class,
+            [
+                'label' => 'monsieurbiz_better_admin.form.logo_login_width',
+                'help' => 'monsieurbiz_better_admin.form.logo_login_width_help',
+                'required' => false,
+            ]
+        );
+        $this->addWithDefaultCheckbox(
+            $builder,
             'logo_sidebar',
             ImageType::class,
             [

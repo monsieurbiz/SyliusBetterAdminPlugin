@@ -4,3 +4,7 @@ liip_imagine:
             filters:
                 relative_resize:
                     widen: 250
+        admin_login_logo:
+            filters:
+                relative_resize:
+                    widen: 250
