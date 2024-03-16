@@ -9,7 +9,7 @@
         "monsieurbiz/sylius-media-manager-plugin": "^1.0",
         "monsieurbiz/sylius-settings-plugin": "^1.0",
         "php": "^8.2",
-        "sylius/sylius": ">=1.12"
+        "sylius/sylius": ">=1.12 <1.13"
     },
     "require-dev": {
         "behat/behat": "^3.6.1",
