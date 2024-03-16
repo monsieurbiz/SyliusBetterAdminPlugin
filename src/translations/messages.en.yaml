@@ -1,0 +1,12 @@
+monsieurbiz_better_admin:
+    form:
+        color: 'Color'
+        color_help: 'The main color of your website used in admin displays'
+        logo: 'Logo'
+        logo_help: 'Displayed in login admin page'
+        logo_dark: 'Logo dark'
+        logo_dark_help: 'Displayed in sidebar'
+    settings:
+        admin:
+            plugin_name: Admin
+            description: Admin management

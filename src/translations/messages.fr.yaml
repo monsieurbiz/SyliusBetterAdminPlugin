@@ -1,0 +1,12 @@
+monsieurbiz_better_admin:
+    form:
+        color: 'Couleur'
+        color_help: 'La couleur principale de votre site utilisée dans les affichages d'administration'
+        logo: 'Logo'
+        logo_help: 'Affiché sur la page de connexion de l'administration'
+        logo_dark: 'Logo sombre'
+        logo_dark_help: 'Affiché dans la barre latérale'
+    settings:
+        admin:
+            plugin_name: Admin
+            description: Gestion de l'administration

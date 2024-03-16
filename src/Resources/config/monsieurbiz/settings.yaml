@@ -1,0 +1,12 @@
+monsieurbiz_sylius_settings:
+    plugins:
+        monsieurbiz_better_admin.admin:
+            vendor_name: Monsieur Biz
+            plugin_name: monsieurbiz_better_admin.settings.admin.plugin_name
+            description: monsieurbiz_better_admin.settings.admin.description
+            icon: paint brush
+            use_locales: false
+            classes:
+                form: MonsieurBiz\SyliusBetterAdminPlugin\Form\Type\Settings\AdminSettingsType
+            default_values:
+                color: '#1abb9c'
