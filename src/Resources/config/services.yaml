@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    MonsieurBiz\SyliusBetterAdminPlugin\:
+        resource: '../../*'
+        exclude: '../../{Entity}'
+
+    MonsieurBiz\SyliusBetterAdminPlugin\Controller\:
+        resource: '../../Controller'
+        tags: [ 'controller.service_arguments' ]
+

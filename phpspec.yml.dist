@@ -1,0 +1,6 @@
+suites:
+    main:
+        namespace: MonsieurBiz\SyliusBetterAdminPlugin
+        psr4_prefix: MonsieurBiz\SyliusBetterAdminPlugin
+        src_path: src
+        spec_path: tests
