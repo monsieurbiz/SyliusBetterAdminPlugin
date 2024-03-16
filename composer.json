@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "monsieurbiz/sylius-admin-better-login-plugin": "^2.0",
+        "monsieurbiz/sylius-media-manager-plugin": "^1.0",
         "monsieurbiz/sylius-settings-plugin": "^1.0",
         "php": "^8.2",
         "sylius/sylius": ">=1.12"
