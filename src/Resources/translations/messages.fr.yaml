@@ -14,6 +14,8 @@ monsieurbiz_better_admin:
         logo_sidebar_help: 'Affiché dans la barre latérale (sur fond sombre)'
         logo_sidebar_width: 'Largeur du logo dans la barre latérale'
         logo_sidebar_width_help: 'Largeur du logo dans la barre latérale en pixels'
+        background_image_keywords: 'Mots-clés de l''image de fond dans la page de connexion'
+        background_image_keywords_help: 'Mots-clés pour rechercher une image de fond dans Unsplash'
     settings:
         admin:
             plugin_name: Admin

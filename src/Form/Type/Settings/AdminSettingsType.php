@@ -96,5 +96,15 @@ class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInte
                 'required' => false,
             ]
         );
+        $this->addWithDefaultCheckbox(
+            $builder,
+            'background_image_keywords',
+            TextType::class,
+            [
+                'label' => 'monsieurbiz_better_admin.form.background_image_keywords',
+                'help' => 'monsieurbiz_better_admin.form.background_image_keywords_help',
+                'required' => false,
+            ]
+        );
     }
 }

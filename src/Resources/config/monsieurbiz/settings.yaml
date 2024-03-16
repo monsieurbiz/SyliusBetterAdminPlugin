@@ -13,3 +13,4 @@ monsieurbiz_sylius_settings:
                 circular_icon_color: '#ffffff'
                 logo_login_width: '200'
                 logo_sidebar_width: '90'
+                background_image_keywords: 'computer,typing,editor'
