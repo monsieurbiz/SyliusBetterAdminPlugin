@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "MonsieurBiz\\SyliusBetterAdminPlugin\\SyliusBetterAdminPlugin": [
+        "MonsieurBiz\\SyliusBetterAdminPlugin\\MonsieurBizSyliusBetterAdminPlugin": [
             "all"
         ]
     },
