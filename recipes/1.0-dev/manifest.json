@@ -8,8 +8,8 @@
         "config/": "%CONFIG_DIR%/"
     },
     "copy-from-package": {
-      "src/Resources/views/SyliusUiBundle/Security/_login.html.twig": "templates/SyliusUiBundle/Security/_login.html.twig",
-      "src/Resources/views/SyliusAdminBundle/Layout/_logo.html.twig": "templates/SyliusAdminBundle/Layout/_logo.html.twig",
+      "src/Resources/views/SyliusUiBundle/Security/_login.html.twig": "templates/bundles/SyliusUiBundle/Security/_login.html.twig",
+      "src/Resources/views/SyliusAdminBundle/Layout/_logo.html.twig": "templates/bundles/SyliusAdminBundle/Layout/_logo.html.twig",
       "src/Resources/views/MonsieurBizSyliusAdminBetterLoginPlugin/Admin/Login/_javascript.html.twig": "templates/bundles/MonsieurBizSyliusAdminBetterLoginPlugin/Admin/Login/_javascript.html.twig"
     }
 }
