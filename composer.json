@@ -2,7 +2,7 @@
     "name": "monsieurbiz/sylius-better-admin-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
-    "description": "",
+    "description": "Manage your logos, colors and backgrounds with settings in Sylius Admin pannel",
     "license": "MIT",
     "require": {
         "monsieurbiz/sylius-admin-better-login-plugin": "^2.0",
@@ -64,8 +64,8 @@
         "symfony": {
             "docker": false,
             "endpoint": [
-                                "https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master",
-                                "flex://defaults"
+                "https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master",
+                "flex://defaults"
             ]
         },
         "branch-alias": {
