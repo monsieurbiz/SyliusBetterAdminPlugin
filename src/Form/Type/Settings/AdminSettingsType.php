@@ -1,9 +1,11 @@
 <?php
 
 /*
- * This file is part of Monsieur Biz's  for Sylius.
+ * This file is part of Monsieur Biz' Better Admin plugin for Sylius.
+ *
  * (c) Monsieur Biz <sylius@monsieurbiz.com>
- * For the full copyright and license information, please view the LICENSE
+ *
+ * For the full copyright and license information, please view the LICENSE.txt
  * file that was distributed with this source code.
  */
 
@@ -26,26 +28,6 @@ class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInte
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $this->addWithDefaultCheckbox(
-            $builder,
-            'color',
-            ColorType::class,
-            [
-                'label' => 'monsieurbiz_better_admin.form.color',
-                'help' => 'monsieurbiz_better_admin.form.color_help',
-                'required' => false,
-            ]
-        );
-        $this->addWithDefaultCheckbox(
-            $builder,
-            'circular_icon_color',
-            ColorType::class,
-            [
-                'label' => 'monsieurbiz_better_admin.form.circular_icon_color',
-                'help' => 'monsieurbiz_better_admin.form.circular_icon_color_help',
-                'required' => false,
-            ]
-        );
         $this->addWithDefaultCheckbox(
             $builder,
             'logo',
@@ -88,21 +70,40 @@ class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInte
         );
         $this->addWithDefaultCheckbox(
             $builder,
-            'custom_css',
-            TextareaType::class,
+            'background_image',
+            ImageType::class,
             [
-                'label' => 'monsieurbiz_better_admin.form.custom_css',
-                'help' => 'monsieurbiz_better_admin.form.custom_css_help',
+                'label' => 'monsieurbiz_better_admin.form.background_image',
                 'required' => false,
             ]
         );
         $this->addWithDefaultCheckbox(
             $builder,
-            'background_image_keywords',
-            TextType::class,
+            'color',
+            ColorType::class,
             [
-                'label' => 'monsieurbiz_better_admin.form.background_image_keywords',
-                'help' => 'monsieurbiz_better_admin.form.background_image_keywords_help',
+                'label' => 'monsieurbiz_better_admin.form.color',
+                'help' => 'monsieurbiz_better_admin.form.color_help',
+                'required' => false,
+            ]
+        );
+        $this->addWithDefaultCheckbox(
+            $builder,
+            'circular_icon_color',
+            ColorType::class,
+            [
+                'label' => 'monsieurbiz_better_admin.form.circular_icon_color',
+                'help' => 'monsieurbiz_better_admin.form.circular_icon_color_help',
+                'required' => false,
+            ]
+        );
+        $this->addWithDefaultCheckbox(
+            $builder,
+            'custom_css',
+            TextareaType::class,
+            [
+                'label' => 'monsieurbiz_better_admin.form.custom_css',
+                'help' => 'monsieurbiz_better_admin.form.custom_css_help',
                 'required' => false,
             ]
         );

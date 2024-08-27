@@ -3,6 +3,8 @@
 {% import '@SyliusUi/Macro/messages.html.twig' as messages %}
 
 {% set logo = setting('monsieurbiz_better_admin.admin', 'logo')|default('') %}
+{% set backgroundImage = setting('monsieurbiz_better_admin.admin', 'background_image')|default('') %}
+
 <div class="ui middle aligned center aligned grid">
     <div class="right floated column" style="margin-right: 2%;">
         {{ sonata_block_render_event('sylius.admin.login.before_form', {'form': form}) }}
@@ -35,3 +37,21 @@
         {{ form_end(form, {'render_rest': false}) }}
     </div>
 </div>
+
+<script type="text/javascript">
+    function changeBodyBackground(imgUrl)
+    {
+        let bodyStyle = document.body.style;
+        bodyStyle.backgroundSize = 'cover';
+        bodyStyle.backgroundRepeat = 'no-repeat';
+        bodyStyle.backgroundImage = "url('" + imgUrl + "')";
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        {% if backgroundImage is empty %}
+        changeBodyBackground('https://picsum.photos/1600/900?random');
+        {% else %}
+        changeBodyBackground('{{ asset(backgroundImage) | imagine_filter('admin_login_background') | escape('js') }}');
+        {% endif %}
+    });
+</script>

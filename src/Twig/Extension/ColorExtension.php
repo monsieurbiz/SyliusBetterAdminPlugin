@@ -1,9 +1,11 @@
 <?php
 
 /*
- * This file is part of Monsieur Biz's  for Sylius.
+ * This file is part of Monsieur Biz' Better Admin plugin for Sylius.
+ *
  * (c) Monsieur Biz <sylius@monsieurbiz.com>
- * For the full copyright and license information, please view the LICENSE
+ *
+ * For the full copyright and license information, please view the LICENSE.txt
  * file that was distributed with this source code.
  */
 
@@ -46,13 +48,13 @@ final class ColorExtension extends AbstractExtension
 
     public function rgbToHex(int $red, int $green, int $blue): string
     {
-        return sprintf('#%02x%02x%02x', $red, $green, $blue);
+        return \sprintf('#%02x%02x%02x', $red, $green, $blue);
     }
 
     public function hexToRgba(string $hex, float $alpha): string
     {
         $rgb = $this->hexToRgb($hex);
 
-        return sprintf('rgba(%d, %d, %d, %s)', $rgb[0], $rgb[1], $rgb[2], $alpha);
+        return \sprintf('rgba(%d, %d, %d, %s)', $rgb[0], $rgb[1], $rgb[2], $alpha);
     }
 }
