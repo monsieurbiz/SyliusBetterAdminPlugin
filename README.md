@@ -35,7 +35,6 @@ You can copy the templates to customize the display of the admin panel:
 mkdir -p templates/bundles/;
 cp -Rv vendor/monsieurbiz/sylius-better-admin-plugin/src/Resources/views/SyliusUiBundle templates/bundles/;
 cp -Rv vendor/monsieurbiz/sylius-better-admin-plugin/src/Resources/views/SyliusAdminBundle templates/bundles/;
-cp -Rv vendor/monsieurbiz/sylius-better-admin-plugin/src/Resources/views/MonsieurBizSyliusAdminBetterLoginPlugin templates/bundles/;
 ```
 
 ## Admin form
