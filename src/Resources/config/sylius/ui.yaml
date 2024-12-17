@@ -2,5 +2,5 @@ sylius_ui:
     events:
         sylius.admin.layout.stylesheets:
             blocks:
-                monsieurbiz_advanced_shipping_stylesheet:
+                monsieurbiz_better_admin_stylesheet:
                     template: "@MonsieurBizSyliusBetterAdminPlugin/Admin/_styles.html.twig"
