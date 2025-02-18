@@ -80,8 +80,33 @@ body div > a {
 
 .monsieurbiz-better-admin-login-logo {
     max-width: {{ logoLoginWidth }}px;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-bottom: 40px;
+}
+
+form[name="settings"] .monsieurbiz-sylius-file-manager__field {
+    border: 1px solid rgba(34,36,38,.1);
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.03);
+    padding: 1.8em;
+    width: 100%;
+    background: #f3f4f5;
+    color: rgba(0,0,0,.6);
+    border-radius: .28571429rem;
+}
+
+form[name="settings"] .field {
+    margin-top: 2rem !important;
+}
+
+form[name="settings"] .monsieurbiz-sylius-file-manager__field.field,
+form[name="settings"] .monsieurbiz-sylius-file-manager__field.field .field,
+form[name="settings"] .field:first-child {
+    margin-top: 0 !important;
+}
+
+form[name="settings"] .help-text {
+    font-size: 0.85rem;
+    color: #666666;
 }
 
 {{ customCss }}
