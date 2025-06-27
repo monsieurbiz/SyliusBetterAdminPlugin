@@ -1,0 +1,30 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_admin.base#stylesheets:
+            monsieurbiz_better_admin_stylesheet:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/Admin/_styles.html.twig"
+                priority: 9999
+        sylius_admin.layout.stylesheets:
+            monsieurbiz_better_admin_stylesheet_layout:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/Admin/_styles.html.twig"
+                priority: 9999
+        sylius_admin.common.component.sidebar:
+            logo:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/Admin/_logo.html.twig"
+                priority: 9999
+                context:
+                    use_webpack: true
+        sylius_admin.security.login:
+            monsieurbiz_better_admin_login:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/SyliusUiBundle/Security/_login.html.twig"
+                priority: 9999
+                context:
+                    form: form
+                    last_error: last_error
+                    last_username: last_username
+        sylius_admin.security.login.page.logo:
+            image:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/Admin/_login_logo.html.twig"
+                priority: 9999
+                context:
+                    paths: paths
