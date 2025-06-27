@@ -1,13 +1,16 @@
-{% form_theme form '@SyliusUi/Form/theme.html.twig' %}
-
 {% import '@SyliusUi/Macro/messages.html.twig' as messages %}
 
 {% set logo = setting('monsieurbiz_better_admin.admin', 'logo')|default('') %}
 {% set backgroundImage = setting('monsieurbiz_better_admin.admin', 'background_image')|default('') %}
+{% set form = form|default(null) %}
+{% set last_error = last_error|default(null) %}
+{% set last_username = last_username|default('') %}
 
 <div class="ui middle aligned center aligned grid">
     <div class="right floated column" style="margin-right: 2%;">
-        {{ sonata_block_render_event('sylius.admin.login.before_form', {'form': form}) }}
+        {% if form is not null %}
+            {% hook 'sylius.admin.login.before_form' with {'form': form} %}
+        {% endif %}
 
         {% if last_error %}
             <div class="ui left aligned basic segment">
@@ -15,26 +18,19 @@
             </div>
         {% endif %}
 
-        {{ form_start(form, {'action': action|default('/'), 'attr': {'class': 'ui large loadable form', 'novalidate': 'novalidate'}}) }}
+        {% if form is not null %}
+            {{ form_start(form, {'action': action|default('/'), 'attr': {'class': 'ui large loadable form', 'novalidate': 'novalidate'}}) }}
+        {% endif %}
         <div class="ui left aligned very padded segment">
-            {% if logo is not empty %}
-                <div class="monsieurbiz-better-admin-login-logo">
-                    <img src="{{ logo|imagine_filter('admin_login_logo') }}" class="ui fluid image" id="logo">
-                </div>
-            {% else %}
-                {% if paths.logo is defined %}
-                    <div style="max-width: 200px; margin: 0 auto; margin-bottom: 40px;">
-                        <img src="{{ asset(paths.logo) }}" class="ui fluid image" id="logo">
-                    </div>
-                {% endif %}
-            {% endif %}
+            {% hook 'sylius_admin.security.login.page.logo' with {'paths': paths|default({})} %}
 
-            {{ sylius_template_event('sylius.admin.login.form.content', _context) }}
+            {% hook 'sylius.admin.login.form.content' %}
         </div>
 
-        {{ sonata_block_render_event('sylius.admin.login.form', {'form': form}) }}
-
-        {{ form_end(form, {'render_rest': false}) }}
+        {% if form is not null %}
+            {% hook 'sylius.admin.login.after_form' with {'form': form} %}
+            {{ form_end(form, {'render_rest': false}) }}
+        {% endif %}
     </div>
 </div>
 
