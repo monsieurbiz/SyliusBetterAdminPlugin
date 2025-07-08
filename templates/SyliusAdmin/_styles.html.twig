@@ -1,0 +1,129 @@
+{% set mainColor = setting('monsieurbiz_better_admin.admin', 'color')|default('#2fcb9c') %}
+{% set circularIconColor = setting('monsieurbiz_better_admin.admin', 'circular_icon_color')|default('#1abb9c') %}
+{% set logoSidebarWidth = setting('monsieurbiz_better_admin.admin', 'logo_sidebar_width')|default('90') %}
+{% set logoLoginWidth = setting('monsieurbiz_better_admin.admin', 'logo_login_width')|default('200') %}
+{% set customCss = setting('monsieurbiz_better_admin.admin', 'custom_css')|default('') %}
+
+<style>
+/** Styles to customize colors */
+
+input:focus, textarea:focus, select:focus {
+    border-color: {{ mainColor|monsieurbiz_better_admin_hex_to_rgba(0.5) }} !important;
+    outline: none;
+    box-shadow: 0 0 0 1px {{ mainColor }} !important;
+}
+
+.form-check-input:checked, .btn-check:focus {
+    background-color: {{ mainColor }} !important;
+    border-color: {{ mainColor }} !important;
+}
+
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+    color: {{ mainColor }} !important;
+    border-color: {{ mainColor }} !important;
+    background-color: transparent !important;
+}
+.navbar-vertical .navbar-collapse .sidebar.navbar-nav .nav-item .dropdown-menu-column .dropdown-item.active,.navbar-vertical .navbar-collapse .sidebar.navbar-nav .nav-item .dropdown-menu-column a.dropdown-item:hover {
+    color: {{ mainColor }}  !important;
+}
+
+.btn.btn-outline-primary {
+    color: {{ mainColor }} !important;
+    border-color: {{ mainColor }} !important;
+    background-color: transparent !important;
+}
+
+.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:active {
+    color: white !important;
+    border-color: {{ mainColor }} !important;
+    background-color: {{ mainColor }} !important;
+}
+
+button.bg-primary, .btn-primary {
+    background-color: {{ mainColor }} !important;
+    border-color: {{ mainColor }} !important;
+}
+button.bg-secondary, .btn-secondary {
+    background-color: var(--tblr-secondary) !important;
+    border-color: var(--tblr-secondary) !important;
+
+}
+.sidebar .active > a,
+.admin-layout__nav .item.active {
+    background-color: {{ mainColor }} !important;
+    color: white !important;
+}
+
+.table thead th.sorted {
+    color: {{ mainColor }} !important;
+}
+
+.breadcrumb a:hover {
+    color: {{ mainColor }} !important;
+}
+.stats .btn.active {
+    color: {{ mainColor }} !important;
+}
+
+.monsieurbiz-better-admin-sidebar-logo {
+    max-width: {{ logoSidebarWidth }}px;
+    margin: 0 auto;
+}
+
+.monsieurbiz-better-admin-login-logo {
+    max-width: {{ logoLoginWidth }}px;
+    margin: 0 auto 40px auto;
+}
+
+form[name="settings"] .monsieurbiz-sylius-file-manager__field {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    padding: 1.8rem;
+    width: 100%;
+    background: #f3f4f5;
+    color: #4b5563;
+    border-radius: 0.375rem;
+}
+
+form[name="settings"] .field {
+    margin-top: 2rem !important;
+}
+form[name="settings"] .monsieurbiz-sylius-file-manager__field.field,
+form[name="settings"] .monsieurbiz-sylius-file-manager__field.field .field,
+form[name="settings"] .field:first-child {
+    margin-top: 0 !important;
+}
+
+.help-text {
+    font-size: 0.875rem;
+    color: #666666;
+}
+.collection--flex > div,
+.collection--item-flex [data-form-collection="item"] > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.collection--flex > div > div {
+    margin-right: 10px;
+}
+.collection--flex.collection--flex-wide > div > div {
+    width: 48%;
+}
+
+.pell-content {
+    background-color: #fff;
+}
+.list-group-item.active{
+    border-left-color: {{ mainColor }} !important;
+}
+.navbar-collapse a.dropdown-item:hover{
+    color: {{ mainColor }} !important;
+}
+
+{{ customCss|raw }}
+</style>
