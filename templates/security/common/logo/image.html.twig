@@ -1,16 +1,11 @@
 {% set logo = setting('monsieurbiz_better_admin.admin', 'logo')|default('') %}
-{% set use_webpack = use_webpack|default(false) %}
 
 {% if logo is not empty %}
-    <div class="monsieurbiz-better-admin-login-logo">
-        <img src="{{ logo|imagine_filter('admin_login_logo') }}" class="ui fluid image" id="logo">
-    </div>
+    {% if is_svg_image(logo) %}
+        <img src="{{ logo }}" class="navbar-brand-image" id="logo" alt="Logo">
+    {% else %}
+        <img src="{{ logo|imagine_filter('admin_login_logo') }}" class="navbar-brand-image" id="logo" alt="Logo">
+    {% endif %}
 {% else %}
-    <div style="max-width: 200px; margin: 0 auto; margin-bottom: 40px;">
-        {% if use_webpack %}
-            <img src="{{ asset('build/admin/images/admin-logo.svg', 'admin') }}" class="ui fluid image" id="logo">
-        {% else %}
-            <img src="{{ asset('build/admin/images/sylius-logo-dark-text.72a9465e.png', 'admin') }}" class="ui fluid image" id="logo">
-        {% endif %}
-    </div>
+    <img src="{{ asset('build/admin/images/sylius-logo.svg', 'admin') }}" alt="Sylius" class="navbar-brand-image" />
 {% endif %}
