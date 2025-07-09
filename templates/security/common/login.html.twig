@@ -6,33 +6,47 @@
 {% set last_error = last_error|default(null) %}
 {% set last_username = last_username|default('') %}
 
-<div class="ui middle aligned center aligned grid">
-    <div class="right floated column" style="margin-right: 2%;">
+{% hook 'sylius.admin.login.before_page' %}
+
+<div class="login-container">
+    <div class="login-box">
+        {% hook 'sylius.admin.login.before_content' %}
+        
         {% if form is not null %}
             {% hook 'sylius.admin.login.before_form' with {'form': form} %}
         {% endif %}
 
         {% if last_error %}
-            <div class="ui left aligned basic segment">
+            <div class="login-error">
                 {{ messages.error(last_error.messageKey) }}
             </div>
         {% endif %}
 
         {% if form is not null %}
-            {{ form_start(form, {'action': action|default('/'), 'attr': {'class': 'ui large loadable form', 'novalidate': 'novalidate'}}) }}
+            {{ form_start(form, {'action': action|default('/'), 'attr': {'class': 'login-form', 'novalidate': 'novalidate'}}) }}
         {% endif %}
-        <div class="ui left aligned very padded segment">
+        
+        <div class="login-content">
             {% hook 'sylius_admin.security.login.page.logo' with {'paths': paths|default({})} %}
-
+            
+            {% hook 'sylius.admin.login.form.before_fields' with {'form': form} %}
+            
             {% hook 'sylius.admin.login.form.content' %}
+            
+            {% hook 'sylius.admin.login.form.after_fields' with {'form': form} %}
         </div>
 
         {% if form is not null %}
             {% hook 'sylius.admin.login.after_form' with {'form': form} %}
             {{ form_end(form, {'render_rest': false}) }}
         {% endif %}
+        
+        {% hook 'sylius.admin.login.after_content' %}
     </div>
 </div>
+
+{% hook 'sylius.admin.login.after_page' %}
+
 
 <script type="text/javascript">
     function changeBodyBackground(imgUrl)
