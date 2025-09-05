@@ -17,6 +17,17 @@ input:focus, textarea:focus, select:focus {
     background-color: {{ mainColor }} !important;
     border-color: {{ mainColor }} !important;
 }
+.link-reset, .fw-medium {
+    color: {{ mainColor }} !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: {{ mainColor }} !important;
+    background-color: {{ mainColor|monsieurbiz_better_admin_hex_to_rgba(0.14) }} !important;
+}
+
+.dropdown-item.active, .dropdown-item:hover {
+    background-color: {{ mainColor|monsieurbiz_better_admin_hex_to_rgba(0.14) }} !important;
+}
 
 .btn-check:checked + .btn,
 :not(.btn-check) + .btn:active,
