@@ -1,5 +1,4 @@
 {% set mainColor = setting('monsieurbiz_better_admin.admin', 'color')|default('#2fcb9c') %}
-{% set circularIconColor = setting('monsieurbiz_better_admin.admin', 'circular_icon_color')|default('#1abb9c') %}
 {% set logoSidebarWidth = setting('monsieurbiz_better_admin.admin', 'logo_sidebar_width')|default('90') %}
 {% set logoLoginWidth = setting('monsieurbiz_better_admin.admin', 'logo_login_width')|default('200') %}
 {% set customCss = setting('monsieurbiz_better_admin.admin', 'custom_css')|default('') %}
@@ -88,7 +87,6 @@ button.bg-secondary, .btn-secondary {
 
 .monsieurbiz-better-admin-login-logo {
     max-width: {{ logoLoginWidth }}px;
-    margin: 0 auto 40px auto;
 }
 
 form[name="settings"] .monsieurbiz-sylius-file-manager__field {

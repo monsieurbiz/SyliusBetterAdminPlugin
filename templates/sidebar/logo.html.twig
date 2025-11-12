@@ -1,0 +1,12 @@
+{% set logoSidebar = setting('monsieurbiz_better_admin.admin', 'logo_sidebar')|default('') %}
+{% if logoSidebar is not empty %}
+    <div class="monsieurbiz-better-admin-sidebar-logo">
+        {% if is_svg_image(logoSidebar) %}
+            <img src="{{ logoSidebar }}" class="sidebar-logo-image" alt="Logo">
+        {% else %}
+            <img src="{{ logoSidebar|imagine_filter('admin_sidebar_logo') }}" class="sidebar-logo-image" alt="Logo">
+        {% endif %}
+    </div>
+{% else %}
+    <img src="{{ asset('build/admin/images/sylius-logo.svg', 'admin') }}" alt="Sylius" class="navbar-brand-image" />
+{% endif %}

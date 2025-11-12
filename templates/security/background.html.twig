@@ -1,0 +1,26 @@
+
+{% set backgroundImage = setting('monsieurbiz_better_admin.admin', 'background_image')|default('') %}
+
+<script type="text/javascript">
+    function changeBodyBackground(imgUrl)
+    {
+        let bodyStyle = document.body.style;
+        bodyStyle.backgroundSize = 'cover';
+        bodyStyle.backgroundRepeat = 'no-repeat';
+        bodyStyle.backgroundImage = "url('" + imgUrl + "')";
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        {% if backgroundImage is empty %}
+        changeBodyBackground('https://picsum.photos/1600/900?random');
+        {% else %}
+        changeBodyBackground('{{ asset(backgroundImage) | imagine_filter('admin_login_background') | escape('js') }}');
+        {% endif %}
+    });
+</script>
+
+<style>
+    html {
+        margin: 0 !important;
+    }
+</style>

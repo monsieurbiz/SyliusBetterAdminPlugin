@@ -4,13 +4,12 @@ monsieurbiz_sylius_settings:
             vendor_name: Monsieur Biz
             plugin_name: monsieurbiz_better_admin.settings.admin.plugin_name
             description: monsieurbiz_better_admin.settings.admin.description
-            icon: cog
+            icon: bi:gear
             use_locales: false
             classes:
                 form: MonsieurBiz\SyliusBetterAdminPlugin\Form\Type\Settings\AdminSettingsType
             default_values:
                 color: '#1abb9c'
-                circular_icon_color: '#ffffff'
                 logo_login_width: '200'
                 logo_sidebar_width: '200'
                 logo: ''
