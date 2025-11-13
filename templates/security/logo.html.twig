@@ -1,6 +1,6 @@
 {% set logo = setting('monsieurbiz_better_admin.admin', 'logo')|default('') %}
 
-<div class="mb-4 text-center"> 
+<div class="mb-4 text-center">
     {% if logo is not empty %}
         {% if is_svg_image(logo) %}
             <img src="{{ logo }}" class="monsieurbiz-better-admin-login-logo" id="logo" alt="Logo">
@@ -8,6 +8,6 @@
             <img src="{{ logo|imagine_filter('admin_login_logo') }}" class="monsieurbiz-better-admin-login-logo" id="logo" alt="Logo">
         {% endif %}
     {% else %}
-        <img src="{{ asset('build/admin/images/sylius-logo.svg', 'admin') }}" alt="Sylius" class="navbar-brand-image" />
+        <img src="{{ asset('build/admin/images/sylius-logo-dark-text.png', 'admin') }}" alt="Sylius" class="navbar-brand-image" />
     {% endif %}
 </div>

@@ -28,6 +28,10 @@ input:focus, textarea:focus, select:focus {
     background-color: {{ mainColor|monsieurbiz_better_admin_hex_to_rgba(0.14) }} !important;
 }
 
+svg.text-primary, .nav svg {
+    color: {{ mainColor }} !important;
+}
+
 .btn-check:checked + .btn,
 :not(.btn-check) + .btn:active,
 .btn:first-child:active,
