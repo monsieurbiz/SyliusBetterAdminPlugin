@@ -5,9 +5,9 @@ services:
         public: false
 
     MonsieurBiz\SyliusBetterAdminPlugin\:
-        resource: '../../*'
-        exclude: '../../{Entity}'
+        resource: '../src/*'
+        exclude: '../src/{Entity}'
 
     MonsieurBiz\SyliusBetterAdminPlugin\Controller\:
-        resource: '../../Controller'
+        resource: '../src/Controller'
         tags: [ 'controller.service_arguments' ]

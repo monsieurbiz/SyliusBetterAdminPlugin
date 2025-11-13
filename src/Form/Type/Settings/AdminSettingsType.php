@@ -89,16 +89,6 @@ class AdminSettingsType extends AbstractSettingsType implements SettingsTypeInte
         );
         $this->addWithDefaultCheckbox(
             $builder,
-            'circular_icon_color',
-            ColorType::class,
-            [
-                'label' => 'monsieurbiz_better_admin.form.circular_icon_color',
-                'help' => 'monsieurbiz_better_admin.form.circular_icon_color_help',
-                'required' => false,
-            ]
-        );
-        $this->addWithDefaultCheckbox(
-            $builder,
             'custom_css',
             TextareaType::class,
             [

@@ -1,0 +1,42 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_admin.base#stylesheets:
+            monsieurbiz_better_admin_stylesheet:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/styles.html.twig"
+                priority: 9999
+        sylius_admin.common.component.sidebar.logo:
+            image:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/sidebar/logo.html.twig"
+                priority: 9999
+        sylius_admin.security.login.page.logo:
+            image:
+                enabled: false
+        sylius_admin.security.login.page.content:
+            header:
+                enabled: false
+            image:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/security/logo.html.twig"
+                priority: 9999
+            background:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/security/background.html.twig"
+                priority: -9999
+        sylius_admin.security.request_password_reset.page.logo:
+            image:
+                enabled: false
+        sylius_admin.security.request_password_reset.page.content:
+            image:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/security/logo.html.twig"
+                priority: 9999
+            background:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/security/background.html.twig"
+                priority: -9999
+        sylius_admin.security.reset_password.page.logo:
+            image:
+                enabled: false
+        sylius_admin.security.reset_password.page.content:
+            image:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/security/logo.html.twig"
+                priority: 9999
+            background:
+                template: "@MonsieurBizSyliusBetterAdminPlugin/security/background.html.twig"
+                priority: -9999

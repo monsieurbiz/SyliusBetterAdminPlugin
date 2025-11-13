@@ -28,7 +28,7 @@ final class MonsieurBizSyliusBetterAdminExtension extends Extension
      */
     public function load(array $config, ContainerBuilder $container): void
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
         $loader->load('services.yaml');
     }
 
@@ -37,6 +37,6 @@ final class MonsieurBizSyliusBetterAdminExtension extends Extension
      */
     public function getAlias(): string
     {
-        return 'monsieurbiz_better_admin';
+        return 'monsieur_biz_sylius_better_admin';
     }
 }
